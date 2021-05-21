@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coffee List</title>
+
+    </head>
+
+    <body>
+        <h1>My Coffee List</h1>
+        <ul>
+        {% for coffee in coffee_list %}
+            <li>{{ coffee.name }}, {{ coffee.price }}</li>
+        {% endfor %}
+        </ul>
+        <form method="POST">{% csrf_token %}
+            {{ coffee_form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+
+
+
+    </body>
+</html>
