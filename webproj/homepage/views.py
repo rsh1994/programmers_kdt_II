@@ -3,6 +3,7 @@ from .models import Coffee
 from .forms import CoffeeForm
 # Create your views here.
 # 먼저 함수를 구현해야합니다.
+
 def index(request):
     name = "Micheal"
 
@@ -28,3 +29,6 @@ def coffee_view(request):
     
     form = CoffeeForm()
     return render(request, 'coffee.html', {"coffee_list":coffee_all, "coffee_form":form})
+
+def eda(request):
+    return render(request, 'eda.html',{})

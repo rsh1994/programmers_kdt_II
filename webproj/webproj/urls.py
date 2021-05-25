@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from homepage.views import index, me, coffee_view
+from homepage.views import eda
 
 urlpatterns = [
-    path('', me), # 127.0.0.1/
-    path('coffees/',coffee_view),# 127.0.0.1/coffees/
-    path('index/', index) ,# 127.0.0.1/index/
+    path('',eda),
     path('admin/', admin.site.urls), # 127.0.0.1/admin/
 ]
